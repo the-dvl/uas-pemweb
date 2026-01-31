@@ -166,4 +166,42 @@ class ServiceSeeder extends Seeder
                 'service_code' => 'DS-TRAIN-005',
                 'name' => 'Data Science Training & Workshops',
                 'slug' => 'data-science-training-workshops',
-                'short_description' => 'Program pelatihan dan workshop untuk meningkatkan kapabilit
+                'short_description' => 'Program pelatihan dan workshop untuk meningkatkan kapabilitas tim internal dalam bidang data science dan analytics.',
+                'full_description' => 'Kami menyediakan training programs yang disesuaikan dengan kebutuhan perusahaan, mulai dari basic data literacy hingga advanced machine learning techniques. Metode pembelajaran mencakup workshop, hands-on projects, dan mentorship program.',
+                'icon_class' => 'bi-mortarboard',
+                'icon_url' => null,
+                'category' => 'training',
+                'features' => json_encode([
+                    'Customized curriculum',
+                    'Hands-on projects',
+                    'Industry expert trainers',
+                    'Post-training support',
+                    'Certification'
+                ]),
+                'technologies' => json_encode([
+                    'Python', 'SQL', 'Tableau', 'Machine Learning basics'
+                ]),
+                'deliverables' => json_encode([
+                    'Training materials',
+                    'Hands-on exercises',
+                    'Progress reports',
+                    'Certificates',
+                    'Post-training resources'
+                ]),
+                'duration_days' => 10,
+                'starting_price' => 35000000.00,
+                'price_unit' => 'training',
+                'is_popular' => false,
+                'is_active' => true,
+                'display_order' => 5,
+                'meta_title' => 'Data Science Training & Workshop Services',
+                'meta_description' => 'Program pelatihan dan workshop data science untuk meningkatkan kapabilitas analytics tim internal perusahaan.',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ];
+
+        DB::table('services')->insert($services);
+        $this->command->info('Services seeded successfully!');
+    }
+}
