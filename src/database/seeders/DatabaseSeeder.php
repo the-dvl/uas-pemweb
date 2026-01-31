@@ -1,9 +1,8 @@
 <?php
+// src/database/seeders/DatabaseSeeder.php
 
 namespace Database\Seeders;
 
-use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,8 +13,13 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            RoleSeeder::class,
-            UserSeeder::class,
+            CompanyProfileSeeder::class,
+            ServiceSeeder::class,
+            FeatureSeeder::class,
+            HeroSeeder::class,
+            ContactSeeder::class,
+            ServiceRequestSeeder::class,
+            // Tambahkan seeder lain jika diperlukan
         ]);
     }
 }
